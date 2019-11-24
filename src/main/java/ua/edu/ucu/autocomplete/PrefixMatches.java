@@ -4,13 +4,9 @@ import ua.edu.ucu.iterators.TrieIteratorK;
 import ua.edu.ucu.tries.Trie;
 import ua.edu.ucu.tries.Tuple;
 
-import java.util.Collection;
 import java.util.Collections;
 
 
-/**
- * @author andrii
- */
 public class PrefixMatches {
 
     private Trie trie;

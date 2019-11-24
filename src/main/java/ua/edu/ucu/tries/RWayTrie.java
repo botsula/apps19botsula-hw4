@@ -2,14 +2,9 @@ package ua.edu.ucu.tries;
 
 import ua.edu.ucu.iterators.TrieIterator;
 
-import java.util.Iterator;
-
 
 public class RWayTrie implements Trie {
 
-
-    //
-//    private TrieNode cur_node;
     private TrieNode new_node;
     private final TrieNode root;
     private int size;
@@ -36,7 +31,6 @@ public class RWayTrie implements Trie {
         size++;
     }
 
-    // чи є слово в тріе
     @Override
     public boolean contains(String word) {
         int index;
@@ -106,38 +100,5 @@ public class RWayTrie implements Trie {
     @Override
     public int size() {
         return size;
-    }
-
-
-    public static void main(String[] args) {
-        RWayTrie trie = new RWayTrie();
-        Tuple tuple = new Tuple(new String("kar"), 3);
-        Tuple tuple2 = new Tuple(new String("ar"), 2);
-        Tuple tuple3 = new Tuple(new String("antidote"), 8);
-        Tuple tuple4 = new Tuple(new String("antro"), 5);
-
-
-        trie.add(tuple);
-        trie.add(tuple2);
-        trie.add(tuple3);
-        trie.add(tuple4);
-
-        System.out.println(trie.contains("ar"));
-        trie.delete("ar");
-        System.out.println(trie.contains("ar"));
-
-
-        System.out.println(trie.contains("antidote"));
-        trie.delete("antidote");
-        System.out.println(trie.contains("antidote"));
-
-
-        trie.delete("antro");
-        System.out.println(trie.contains("antro"));
-
-        Iterator<String> it = trie.wordsWithPrefix("").iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
     }
 }
