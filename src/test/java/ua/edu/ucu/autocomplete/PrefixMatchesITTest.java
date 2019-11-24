@@ -22,7 +22,7 @@ public class PrefixMatchesITTest {
     }
 
     @Test
-    public void testWordsWithPrefix_String() {
+    public void testWordsWithPrefix_String(){
         String pref = "ab";
 
         Iterable<String> result = pm.wordsWithPrefix(pref);
